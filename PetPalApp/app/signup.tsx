@@ -27,6 +27,7 @@ export default function Signup() {
           paddingHorizontal: 10,
         }}
         placeholder="First Name"
+        placeholderTextColor={'black'}
       />
 
     <Text style={{ fontWeight: 'bold'}}>Last Name</Text>
@@ -39,6 +40,7 @@ export default function Signup() {
           paddingHorizontal: 10,
         }}
         placeholder="Last Name"
+        placeholderTextColor={'black'}
       />
 
       <Text style={{ fontWeight: 'bold'}}>Email</Text>
@@ -51,6 +53,7 @@ export default function Signup() {
           paddingHorizontal: 10,
         }}
         placeholder="Email"
+        placeholderTextColor={'black'}
       />
 
       <Text style={{ fontWeight: 'bold'}}>Username</Text>
@@ -63,6 +66,7 @@ export default function Signup() {
           paddingHorizontal: 10,
         }}
         placeholder="Username"
+        placeholderTextColor={'black'}
       />
 
       <Text style={{ fontWeight: 'bold' }}>Password</Text>
@@ -75,6 +79,7 @@ export default function Signup() {
           paddingHorizontal: 10,
         }}
         placeholder="Password"
+        placeholderTextColor={'black'}
         secureTextEntry
       />
 

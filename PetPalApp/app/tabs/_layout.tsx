@@ -27,19 +27,63 @@ export default function TabLayout() {
         }),
       }}>
       <Tabs.Screen
-        name="home"
+        name='dispense'
+        options={{
+          tabBarButton: () => null,
+        }}
+      />
+      <Tabs.Screen
+        name='home'
         options={{
           title: 'Home',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
       />
-      {/* <Tabs.Screen
-        name="home2"
+      <Tabs.Screen
+        name='devices'
         options={{
-          title: 'Sign Up',
+          tabBarButton: () => null,
+        }}
+      />
+      <Tabs.Screen
+        name="pet_prof"
+        options={{
+          title: 'Profile',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
         }}
-      /> */}
+      />
+      <Tabs.Screen
+        name='wclip'
+        options={{
+          tabBarButton: () => null,
+        }}
+      />
+      <Tabs.Screen
+        name="sfeed"
+        options={{
+          title: 'Social',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="mail.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name='sclip'
+        options={{
+          tabBarButton: () => null,
+        }}
+      />
+      <Tabs.Screen
+        name="settings"
+        options={{
+          title: 'Settings',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="gear.badge" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name='feed'
+        options={{
+          tabBarButton: () => null,
+        }}
+      />
     </Tabs>
   );
 }

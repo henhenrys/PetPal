@@ -27,6 +27,7 @@ export default function Index() {
           paddingHorizontal: 10,
         }}
         placeholder="Username"
+        placeholderTextColor={'black'}
       />
 
       <Text style={{ fontWeight: 'bold' }}>Password</Text>
@@ -39,6 +40,7 @@ export default function Index() {
           paddingHorizontal: 10,
         }}
         placeholder="Password"
+        placeholderTextColor={'black'}
         secureTextEntry
       />
 
