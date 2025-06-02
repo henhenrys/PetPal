@@ -4,49 +4,39 @@ import { router, useRouter } from "expo-router";
 
 export default function HomeScreen() {
     return (
-      <View style={{ display: "flex", flex: 1, flexDirection: 'column', justifyContent: 'center', backgroundColor:'cyan', marginTop: 10, marginBottom: 10}}>
-        <Text style={{ fontSize: 50, fontWeight: 'bold', textAlign: 'center', backgroundColor: 'white'}}>PetPal</Text>
-        <Text style={{textAlign:"center", fontSize: 30}}>Welcome Back!</Text>
-        <View style={{backgroundColor: "yellow", display: 'flex', flexDirection:'row', justifyContent: 'space-evenly'}}>
-          <Image style={{backgroundColor: 'purple'}}source={require('../../assets/images/react-logo.png')} />
-          <Text style={{backgroundColor: 'orange', paddingTop: 40 }}>Person</Text>
+      <View style={{ display: "flex", flex: 1, flexDirection: 'column', justifyContent: 'center', marginTop: 10, marginBottom: 10}}>
+        <View style={{borderColor: 'black', borderWidth: 1, marginLeft: 40, marginRight: 40, borderRadius: 30, backgroundColor: '#7fc4db'}}>
+          <Text style={{ fontSize: 50, fontWeight: 'bold', textAlign: 'center'}}>PetPal</Text>
         </View>
-        <View style={{backgroundColor: "yellow", display: 'flex', flexDirection:'row', justifyContent: 'space-between'}}>
-          <Image style={{backgroundColor: 'purple', height:40, width:40, marginLeft: 30}}source={require('../../assets/images/react-logo.png')} />
+        <Text></Text>
+        <Text style={{textAlign:"center", fontSize: 30}}>Welcome Back!</Text>
+        <Text></Text>
+        <View style={{display: 'flex', flexDirection:'row', justifyContent: 'space-evenly', marginBottom: 70}}>
+          <Image style={{backgroundColor: 'purple'}}source={require('../../assets/images/react-logo.png')} />
+          <View style={{justifyContent: 'center', marginBottom: 10, paddingLeft: 40, paddingRight: 40, backgroundColor:'lightgray', borderRadius: 30, marginTop: 5,}}>
+            <Text style={{fontSize: 20}}>Username</Text>
+          </View>
+        </View>
+        <View style={{display: 'flex', flexDirection:'row', justifyContent: 'space-between'}}>
+          <Image style={{backgroundColor: 'orange', height:50, width:50, marginLeft: 30}}source={require('../../assets/images/react-logo.png')} />
           <Text></Text>
-          <View style={{flex:2}}>
+          <View style={{flex:2, marginLeft:60, marginRight:60, backgroundColor:'lightgray', borderRadius: 30, marginTop: 5, marginBottom:20}}>
             <Button title="Pet Profile" onPress={() => router.push('/tabs/pet_prof')}></Button>
           </View>
           <Text></Text>
         </View>
-        <View style={{backgroundColor: "yellow", display: 'flex', flexDirection:'row', justifyContent: 'space-between'}}>
-          <Image style={{backgroundColor: 'purple', height:40, width:40, marginLeft: 30}}source={require('../../assets/images/react-logo.png')} />
+        <View style={{ display: 'flex', flexDirection:'row', justifyContent: 'space-between'}}>
+          <Image style={{backgroundColor: 'pink', height:50, width:50, marginLeft: 30}}source={require('../../assets/images/react-logo.png')} />
           <Text></Text>
-          <View style={{flex:2}}>
-            <Button title="Device Camera" onPress={() => router.push('../tabs/devices')}></Button>
+          <View style={{flex:2, marginLeft:60, marginRight:60, backgroundColor:'lightgray', borderRadius: 30, marginTop: 5, marginBottom:20}}>
+            <Button title="Device Camera" onPress={() => router.push('../tabs/feed')}></Button>
           </View>
           <Text></Text>
         </View>
-        <View style={{backgroundColor: "yellow", display: 'flex', flexDirection:'row', justifyContent: 'space-between'}}>
-          <Image style={{backgroundColor: 'purple', height:40, width:40, marginLeft: 30}}source={require('../../assets/images/react-logo.png')} />
+        <View style={{display: 'flex', flexDirection:'row', justifyContent: 'space-between'}}>
+          <Image style={{backgroundColor: 'hotpink', height:50, width:50, marginLeft: 30}}source={require('../../assets/images/react-logo.png')} />
           <Text></Text>
-          <View style={{flex:2}}>
-            <Button title="Saved Clips" onPress={() => router.push('../tabs/sclip')}></Button>
-          </View>
-          <Text></Text>
-        </View>
-        <View style={{backgroundColor: "yellow", display: 'flex', flexDirection:'row', justifyContent: 'space-between'}}>
-          <Image style={{backgroundColor: 'purple', height:40, width:40, marginLeft: 30}} source={require('../../assets/images/react-logo.png')} />
-          <Text></Text>
-          <View style={{flex:2}}>
-            <Button title="Social" onPress={() => router.push('/tabs/sfeed')}></Button>
-          </View>
-          <Text></Text>
-        </View>
-        <View style={{backgroundColor: "yellow", display: 'flex', flexDirection:'row', justifyContent: 'space-between'}}>
-          <Image style={{backgroundColor: 'purple', height:40, width:40, marginLeft: 30}}source={require('../../assets/images/react-logo.png')} />
-          <Text></Text>
-          <View style={{flex:2}}>
+          <View style={{flex:2, marginLeft:60, marginRight:60, backgroundColor:'lightgray', borderRadius: 30, marginTop: 5, marginBottom:20}}>
             <Button title="Settings" onPress={() => router.push('/tabs/settings')}></Button>
           </View>
           <Text></Text>

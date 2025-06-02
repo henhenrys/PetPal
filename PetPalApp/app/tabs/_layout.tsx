@@ -27,7 +27,7 @@ export default function TabLayout() {
         }),
       }}>
       <Tabs.Screen
-        name='dispense'
+        name='wclip'
         options={{
           tabBarButton: () => null,
         }}
@@ -36,7 +36,7 @@ export default function TabLayout() {
         name='home'
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={35} name="house.fill" color={color} />,
         }}
       />
       <Tabs.Screen
@@ -49,24 +49,11 @@ export default function TabLayout() {
         name="pet_prof"
         options={{
           title: 'Profile',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={35} name="paperplane.fill" color={color} />,
         }}
       />
       <Tabs.Screen
-        name='wclip'
-        options={{
-          tabBarButton: () => null,
-        }}
-      />
-      <Tabs.Screen
-        name="sfeed"
-        options={{
-          title: 'Social',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="mail.fill" color={color} />,
-        }}
-      />
-      <Tabs.Screen
-        name='sclip'
+        name='feed'
         options={{
           tabBarButton: () => null,
         }}
@@ -75,11 +62,11 @@ export default function TabLayout() {
         name="settings"
         options={{
           title: 'Settings',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="gear.badge" color={color} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={35} name="gear.badge" color={color} />,
         }}
       />
       <Tabs.Screen
-        name='feed'
+        name='dispense'
         options={{
           tabBarButton: () => null,
         }}
