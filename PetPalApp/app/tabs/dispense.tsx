@@ -1,13 +1,6 @@
 import { router } from 'expo-router';
 import React, { useState } from 'react';
-import {
-  View,
-  Text as RNText,
-  StyleSheet,
-  Pressable,
-  Alert,
-  Button,
-} from 'react-native';
+import { View, Text, StyleSheet, Pressable, Alert, Button, } from 'react-native';
 import Svg, { Polygon, Text as SvgText } from 'react-native-svg';
 
 type Triangle = {
@@ -32,7 +25,7 @@ const TreatDispenser: React.FC = () => {
 
   const handleDispense = () => {
     if (selectedIndex !== null) {
-      Alert.alert(`Dispensing from Motor ${selectedIndex + 1}`);
+      Alert.alert(`Dispensing from Bucket ${selectedIndex + 1}`);
       (async () => {
         console.log('button')
         const response = await fetch("https://petpal-3yfg.onrender.com/api/motor", {
@@ -55,7 +48,7 @@ const TreatDispenser: React.FC = () => {
       })()
       router.push('/tabs/feed')
     } else {
-      Alert.alert('No motor selected', 'Please tap a triangle to select a motor.');
+      Alert.alert('No Bucket selected', 'Please tap a triangle to select a bucket.');
     }
   };
 
@@ -82,7 +75,7 @@ const TreatDispenser: React.FC = () => {
         right: Math.max(center.x, x1, x2),
         bottom: Math.max(center.y, y1, y2),
       },
-      label: `Motor ${i + 1}`,
+      label: `Bucket ${i + 1}`,
       labelX,
       labelY,
     };
@@ -90,9 +83,9 @@ const TreatDispenser: React.FC = () => {
   return (
     <View style={styles.container}>
         <View style={{borderColor: 'black', borderWidth: 1, paddingLeft: 90, paddingRight: 90, borderRadius: 30, backgroundColor: '#7fc4db', marginBottom: 60}}>
-            <RNText style={{ fontSize: 50, fontWeight: 'bold', textAlign: 'center'}}>PetPal</RNText>
+            <Text style={{ fontSize: 50, fontWeight: 'bold', textAlign: 'center'}}>PetPal</Text>
         </View>
-      <RNText style={styles.title}>Treat Dispenser</RNText>
+      <Text style={styles.title}>Treat Dispenser</Text>
       <View style={{ width: 300, height: 300 }}>
         <Svg width="300" height="300">
           {triangles.map((t, index) => (
